@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    color: white;
+}
+
+body{
+    background-image: linear-gradient(to left,black,#240024);
+       
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    transition: 0.38s;
+}
+
+.header.sticky{
+    background-image: linear-gradient(to left,black,#240024);
+       
+}
+
+
+.logo{
+    font-size: 3.2rem;
+    color: wheat;
+    font-size: 700;
+    transition-duration: 0.3s;
+}
+
+.logo:hover{
+    color:#360136 ;
+    background-color: white;
+    padding: 0.2rem 1.3rem;
+    border-radius: 2rem;
+    font-weight: 900;
+}
+
+.navbar{
+    letter-spacing: 0.2rem;
+}
+
+.navbar a{
+    font-size: 2rem;
+    color: white;
+    margin-left: 3.5rem;
+    text-transform: uppercase;
+    transition-duration: 0.2s;
+}
+
+/*  CHECK HERE AGAIN IN THIS CODE */
+
+.navbar a:hover {
+    color:#360136 ;
+    background-color: white;
+    padding: 0.2rem 1.3rem;
+    border-radius: 2rem;
+    font-weight: 900;
+}
+
+#menu-icon{
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Home Page section */
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background: url('./img-main.png');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: right;
+    
+}
+
+.home-content{
+    max-width: 60rem;
+}
+
+.home-content h1{
+    font-size: 5.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    color: white;
+}
+
+.home-content h1 span{
+    color: white;
+}
+
+.home-content .text-animation{
+    position: relative;
+    width: 35rem;
+
+}
+
+.home-content .text-animation h3{
+    font-size: 3.6rem;
+    font-weight: 800;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: #970497;
+}
+
+.home-content p{
+    font-size: 1.4rem;
+    max-width: 46rem;
+    margin: 2rem 0 4rem;
+    color: white;
+}
+
+.button-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+    height: 5rem;
+}
+
+.button-box .button{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    border-radius: 5rem;
+    height: 100%;
+    background-color: rgb(151, 13, 151);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.button-box .button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(103, 10, 104);
+    z-index: -1;   
+    transition: 0.5s;
+}
+
+.button-box .button:hover::before{
+    width: 100%;
+}
+
+.button-box .button:nth-child(2){
+    background: transparent;
+    color: white;
+    border: 2px solid rgb(151, 13, 151);
+}
+
+/* Education Details */
+
+.education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 7rem;
+    padding-top: 6rem;
+    background-image: linear-gradient(to right,black,#240024);
+}
+
+.education span{
+    
+    text-decoration-line: underline;
+}
+
+.education .education-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+}
+
+.education-section .education-column,.exp-column{
+    flex: 1 1 40rem;
+}
+
+.education-column .title,.exp-column .title{
+    font-size: 3.0rem;
+    margin:  0 0 1.5rem 2rem;
+}
+
+.education-box .education-content,.exp-box .exp-content{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-content .content ,.exp-content .content{
+    position: relative;
+    padding: 1.5rem;
+    border: 0.2rem solid purple;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.education-content .content .year,.exp-content .content .year{
+    font-size: 1.5rem;
+    color: purple;
+    padding-bottom: 0.5rem;
+}
+
+.education-content .content .year i,.exp-content .content .year i{
+   padding-right: 0.4rem;
+}
+
+.education-content .content h3 ,.exp-content .content h3{
+    font-size: 2rem;
+}
+
+.education-content .content p,.exp-content .content p{
+    font-size: 1.6rem;
+    padding-top: 0.5rem;
+}
+
+
+/*   SKILLS  PAGE   */
+
+.skills{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.skills .skills-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills-section .skills-column{
+    flex: 1 1 40rem; 
+}
+
+.skills-column .title{
+    font-size: 2.8rem;
+    margin: 0 0 1.5rem;
+}
+
+.skills-box .skills-content{
+    position: relative;
+    border: 0.3rem solid purple;
+    border-radius: 0.6rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.skills-content .progress{
+    padding: 1rem 0;
+}
+
+.skills-content .progress h3{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-content .progress h3 span{
+    color: purple;
+}
+
+.skills-content .progress .bar{
+    height: 2.5rem;
+    border-radius: 0.7rem;
+    border: 0.2rem solid purple;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+.skills-content .progress .bar span{
+    display: block;
+    height: 100%;
+    border-radius: 0.3rem ;
+    background-color: purple;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
+    width: 90%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+    width: 80%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
+    width: 60%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+    width: 70%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
+    width: 80%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+    width: 80%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span{
+    width: 65%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
+    width: 70%;
+}
+
+/* ABOUT _ US PAGE  */
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-image:linear-gradient(to right,black,#240024) ;
+    padding-bottom: 6rem;
+}
+
+.heading{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: white;
+}
+
+span{
+    color: #db51db;
+}
+
+.about-img{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img{
+    width: 90%;
+    border-radius: 50%;
+    border: 0.2rem solid #db51db;
+    
+}
+
+.overlap-circle{
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 108%;
+    height: 106%;
+    border-radius: 50%;
+    border-top: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    border-left: 0.3rem solid #db51db;
+    border-right: 0.3rem solid #db51db;
+    animation: spinCircle 3s linear infinite;
+}
+
+.about-content{
+    text-align: center;
+    align-items: center;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+    color: white;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    color: rgb(197, 196, 196);
+}
+
+.button-box.button1{
+    display: inline-block;
+    width: 15rem;
+}
+
+/* contact section design */
+
+.contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contact form{
+   max-width: 70rem;
+   margin: 0 auto;
+   text-align: center;
+
+}
+
+.contact form .input-box{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+} 
+
+.contact form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: 0.8rem 0;
+}
+
+.contact form .input-box .input-field input,.contact form .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: white;
+    background: transparent;
+    border-radius: 0.6rem;
+    border: 0.2rem solid purple;
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder{
+    color: white;
+}
+
+.contact form .textarea-field{
+    position: relative;
+    margin: 0.8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea{
+    resize: none;
+}
+
+.contact button{
+    cursor: pointer;
+}
+
+/*  Footer Section */
+
+.footer{
+    text-align: center;
+    align-items: center;
+    padding: 2rem 9%;
+    background: black;
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+}
+
+/*  Making Website Responsive  */
+
+@media (max-width:1240px){
+   html{
+    font-size: 60%;
+   }
+   .navbar a{
+    font-size: 1.6rem;
+   }
+}
+
+@media (max-width:1020px) {
+    .header{
+        padding: 1.6rem 3%;
+    }
+    .navbar a{
+        font-size: 1.2rem;
+       }
+    section{
+        padding: 10rem 4% 2rem;
+    }
+    .home{
+        padding: 0 4%;
+    }
+    .footer{
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width:790px){
+
+    html{
+        font-size: 41%;
+    }
+    .header{
+         background-color: black;
+    }
+    #menu-icon{
+        display: block;
+    }
+
+    .home-content{
+        width: 60%;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background-color: black;
+        box-shadow: 0 0.5rem 1rem rgb(33, 33, 33);
+        transition: 0.4s ease-in-out;
+        transition-delay: 0.2s;
+        z-index: 1;
+    }
+    .navbar.active{
+        left: 0;
+        transition-delay: 0s;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transition: 0.25s ease;
+        transition-delay: 0s;
+    }
+    .navbar.active .active-navigation{
+        transition-delay: 0.25s;
+        left: 0;
+    }
+    .navbar .active-navigation{
+        position: absolute;
+        top: 0; left: -100%;
+        width: 100%; height: 100%;
+        background-color: black;
+        border-top: 0.1rem solid black;
+        transition: 0.3s ease-in-out;
+        transition-delay: 0.1s;
+        z-index: -1;
+    }
+
+    .navbar.active a{
+        transform: translateX(0);
+        transition-delay: 0.25s;
+    }
+
+}
+
+@media (max-width:640px){
+    html{
+        font-size: 40%;
+    }
+
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:480px){
+    .home-content h1{
+        font-size: 5.2rem;
+
+    }
+
+    .education{
+        padding: 10rem 4% 5rem 5%;
+    }
+
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+
+    .footer p{
+        margin-top: 2rem;
+        text-align: centers;
+    }
+}
+
+@media (max-width:380px){
+    .home{
+        justify-content: center;
+        background: none;
+        
+    }
+    .home-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+}
+
+
+@keyframes spinCircle{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
